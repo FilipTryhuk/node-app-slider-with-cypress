@@ -16,3 +16,12 @@ describe('Swiper Gallery Test', function () {
     cy.get('.swiper-slide-active').should('contain', 'Paris');
   });
 });
+
+describe('Swiper Gallery Test Prev Button', function () {
+  it('Checks if the last slide contains "Paris"', function () {
+    cy.visit('http://localhost:3000');
+    cy.get('.swiper-button-prev').click();
+    cy.wait(2000);
+    cy.get('.swiper-slide-active').should('contain', 'Paris');
+  });
+});
